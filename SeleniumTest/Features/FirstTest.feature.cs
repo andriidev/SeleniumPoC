@@ -184,6 +184,60 @@ this.ScenarioSetup(scenarioInfo);
             this.LogInNavigateAndCreateANewUser("John", "Doe", "email2@mailinator.com", "380", "67", "1485011", ((string[])(null)));
 #line hidden
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Login and Password fields mandatory validation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FirstTest")]
+        public virtual void LoginAndPasswordFieldsMandatoryValidation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login and Password fields mandatory validation", ((string[])(null)));
+#line 24
+ this.ScenarioSetup(scenarioInfo);
+#line 25
+ testRunner.Given("I navigate to Vizor \'Login\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When("I enter \'\' and \'\' and click Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("I see login error meddage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Password field mandatory validation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FirstTest")]
+        public virtual void PasswordFieldMandatoryValidation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Password field mandatory validation", ((string[])(null)));
+#line 29
+ this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.Given("I navigate to Vizor \'Login\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("I enter \'test.user@vizor.ie\' and \'\' and click Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("I see login error meddage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Login field mandatory validation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FirstTest")]
+        public virtual void LoginFieldMandatoryValidation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login field mandatory validation", ((string[])(null)));
+#line 34
+ this.ScenarioSetup(scenarioInfo);
+#line 35
+ testRunner.Given("I navigate to Vizor \'Login\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 36
+ testRunner.When("I enter \'\' and \'Testuser1$\' and click Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+ testRunner.Then("I see login error meddage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -20,3 +20,18 @@ Scenario Outline: Log in, Navigate and Create a new user
 	| John      | Doe     | email2@mailinator.com | +123              | abc  |             |
 	| John      | Doe     | email3@mailinator.com |                   | 888  |             |
 	| John      | Doe     | email2@mailinator.com | 380               | 67   | 1485011     |
+
+	Scenario: Login and Password fields mandatory validation
+	Given I navigate to Vizor 'Login' Page
+	When I enter '' and '' and click Login button
+	Then I see login error meddage
+
+	Scenario: Password field mandatory validation
+	Given I navigate to Vizor 'Login' Page
+	When I enter 'test.user@vizor.ie' and '' and click Login button
+	Then I see login error meddage
+
+	Scenario: Login field mandatory validation
+	Given I navigate to Vizor 'Login' Page
+	When I enter '' and 'Testuser1$' and click Login button
+	Then I see login error meddage

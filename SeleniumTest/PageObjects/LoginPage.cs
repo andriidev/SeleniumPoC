@@ -11,6 +11,10 @@ namespace SeleniumTest.PageObjects
         [FindsBy(How = How.Id, Using = "ContentPlaceHolder_password")]
         public IWebElement PasswordInput { get; set; }
 
+        //Labels, text
+        [FindsBy(How = How.Id, Using = "ContentPlaceHolder_errorMessageLabel_errorMessageLabel")]
+        public IWebElement LoginErrorMessage { get; set; }
+
         //Buttons
         [FindsBy(How = How.Id, Using = "ContentPlaceHolder_SUBMIT")]
         public IWebElement LoginButton { get; set; }

@@ -6,8 +6,12 @@ namespace SeleniumTest.Utilities
     {
         public static Dictionary<string, string> VizDictionary = new Dictionary<string, string>
         {
+            //User creation page
             {"userCreated1","The Vizor Portal User, "},
-            {"userCreated2",") has been successfully created."}
+            {"userCreated2",") has been successfully created."},
+
+            //Login page
+            {"LoginError", "Your sign in information is not valid. Please try again."}
         };
 
     }

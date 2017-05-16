@@ -42,12 +42,20 @@ namespace SeleniumTest.Steps
         }
 
         [Given(@"I enter '(.*)' and '(.*)' and click Login button")]
+        [When(@"I enter '(.*)' and '(.*)' and click Login button")]
         public void GivenIEnterAndAndClickLoginButton(string userName, string password)
         {
             loginPage.UsernameInputSendNewKeys(userName);
             loginPage.PasswordSendNewKeys(password);
             loginPage.LoginButtonClick();
         }
+
+        [Then(@"I see login error meddage")]
+        public void ThenISeeLoginErrorMeddage()
+        {
+            Assert.AreEqual(Dictionary.VizDictionary["LoginError"], loginPage.LoginErrorMessage.Text);
+        }
+
 
         [Then(@"I sign out")]
         public void ThenISignOut()
